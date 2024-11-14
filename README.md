@@ -12,6 +12,9 @@ TypeScript **types** provide free error checking, and free IDE support for getti
 ### Fast
 Parsing TypeScript config files is plenty quick. config-file-ts caches the TypeScript output. 
 
+> [!WARNING]
+> Because the output is cached at a different location, constructing paths from the file using `__dirname` or `import.meta.dirname` will not work as expected.
+
 Assuming TypeScript is in your environment, config-file-ts adds about 5kb to your program, or 1.5kb minified.
 ### How to use
 ```bash
